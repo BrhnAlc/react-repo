@@ -1,4 +1,5 @@
 
+
 // * =======================================================
 // *                     EVENTS
 // * =======================================================
@@ -7,31 +8,36 @@
 //? React ortaminda kullanilan event'larin bilindik tarayicilarda sorunsuz calismasini saglanir.
 
 
-const Event =()=>{
+ const Events= () => {
+ 
+let message = "EVENTS"
 
 const handleClick=(e)=>{
   alert("merhaba")
   console.log(e);
-  console.log(e.target);
+}
+const handleClick1=(e)=>{
+alert("canım içi")
+console.log(e.target.value);
 }
 
+const handleChange=(e)=>{
+  console.log(e.target);
+  message="burhan alaca"
+  console.log(message);
+}
   return(
     <div>
+      <h1>{message}</h1>
+<button onClick={handleClick}>click</button>
+<button onClick={handleClick1}> burhan alaca</button>
 
-      <button onClick={handleClick}>Click</button>
+<button onClick={handleChange}>change</button>
     </div>
   )
 }
 
-export default Event;
-
-
-
-
-
-
-
-
+export default Events;
 
 
 
