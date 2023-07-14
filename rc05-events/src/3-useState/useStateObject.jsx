@@ -1,12 +1,21 @@
 
 
+
+
+
+
+
+
+
+
 import { useState } from "react"
 import UseStateCounter from "./UseStateCounter"
+import UseStateObject from './UseStateObject';
 
 const UseStateObject = () => {
-  //   const [name, setName] = useState("Ahmet Can")
-  //   const [age, setAge] = useState(30)
-  //   const [salary, setSalary] = useState(50000)
+    const [name, setName] = useState("Ahmet Can")
+    const [age, setAge] = useState(30)
+    const [salary, setSalary] = useState(50000)
 
    {/* 3 ayrı state yerine obje olarak kullanmak */}
   const [kisi, setKisi] = useState({

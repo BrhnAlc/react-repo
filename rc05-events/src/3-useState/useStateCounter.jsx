@@ -4,6 +4,10 @@
 //! React 16.8 versiyonu ile gelmistir ve geldikten sonra Class-componentler'in
 //! kullanimi cok azaltmistir.
 
+
+
+
+
 //? React'ta useState(), useEffect(), useContext() gibi bir cok built-in
 //? Hook bulunmaktadir. Ayrica custom hook tanimlamak da mumkundur.
 
@@ -16,30 +20,91 @@
 //*    Normal Javascript fonksiyonlari icerisinde cagrilmamalidir
 //*    (Custom hook'lar icerisinde bir hook cagrilabilir)
 //?    https://react.dev/reference/react
-//* =============================================================
-import { useState } from "react"
+ 
+import { useState } from "react";
 
-const UseStateCounter = () => {
-  //   let count = 0
 
-  //? count adinda bir state tanimlamis olduk ve baslangic degerine 0 atadik.
-  const [count, setCount] = useState(0)
+const UseStateCounter=()=>{
 
-  const handleInc = () => {
-    // count = count + 1
+const [count,setCount]=useState(1)
+  const handleInc=(e)=>{
+    
     setCount(count + 1)
-    console.log(count)
   }
+  const handleClr=()=>{
+    setCount(count - 1)
+  }
+  const handleDec=()=>{
+setCount(0)
+  }
+  return(
 
-  return (
     <div>
       <h2>USE STATE HOOK</h2>
-      <h1>Count:{count}</h1>
-      <button onClick={handleInc}>INC</button>
-      <button>CLR</button>
-      <button>DEC</button>
+      <h1>count:{count}</h1>
+
+<button onClick={handleInc}>INC</button>
+<button onClick={handleClr}>CLR</button>
+<button onClick={handleDec}>DEC</button>
     </div>
   )
 }
 
-export default UseStateCounter
+
+export default UseStateCounter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from 'react';
+// import { useState } from 'react';
+// import { useState } from "react"
+// import { useState } from 'react';
+// import UseStateCounter from './useStateCounter';
+// import Counter from './../2-classComponent/Counter';
+// import UseStateCounter from './useStateCounter';
+// import Form from './../../../rc06-forms/1-forms/Form';
+// import UseStateCounter from './UseStateCounter';
+
+// const UseStateCounter = () => {
+//   //   let count = 0
+
+//   //? count adinda bir state tanimlamis olduk ve baslangic degerine 0 atadik.
+//   const [count, setCount] = useState(0)
+
+//   const handleInc = () => {
+//     // count = count + 1
+//     setCount(count + 1)
+//     console.log(count)
+//   }
+
+//   return (
+//     <div>
+//       <h2>USE STATE HOOK</h2>
+//       <h1>Count:{count}</h1>
+//       <button onClick={handleInc}>INC</button>
+//       <button>CLR</button>
+//       <button>DEC</button>
+//     </div>
+//   )
+// }
+
+// export default UseStateCounter
