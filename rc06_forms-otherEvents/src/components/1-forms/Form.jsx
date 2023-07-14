@@ -1,43 +1,76 @@
+import { useState } from "react";
 
 
 
 const Form = () => {
+  const [username,setUsername]=useState("");
+  const [password,setPassword]=useState("")
+  const [email,setEmail]=useState("")
+
+
+  const handleUsername =(e)=>{
+    console.log(e.target.value);
+    setUsername(e.target.value)
+  }
+
+  const handlePassword=(e)=>{
+    console.log(e.target.value);
+    setPassword(e.target.value)
+  }
+  const handleSubmit=(e)=>{
+    console.log(e.target.value);
+  }
+
+
   return (
-    <div className="text-danger text-center mt-4">
-      <form>
+    <div className="container  text-danger  mt-4">
+      <h2 className="text-center text-success">FORMS IN REACT</h2>
+      <form onSubmit={handleSubmit}>
     <div className="mb-3">
-      <label htmlFor="exampleInputEmail1" className="form-label">
-        Email address
+      <label htmlFor="username" className="form-label">
+        Hello
+        {username}
       </label>
       <input
         type="email"
         className="form-control"
-        id="exampleInputEmail1"
+        id="username"
         aria-describedby="emailHelp"
+        onChange={handleUsername}
       />
-      <div id="emailHelp" className="form-text">
-        We'll never share your email with anyone else.
-      </div>
+      
     </div>
     <div className="mb-3">
-      <label htmlFor="exampleInputPassword1" className="form-label">
+      <label htmlFor="email" className="form-label">
+        Email address <span className="text-success">{email}</span>
+      </label>
+      <input
+        type="email"
+        className="form-control"
+        id="email"
+        aria-describedby="emailHelp"
+        onChange={(e)=>setEmail(e.target.value)}
+        
+      />
+      
+    </div>
+    <div className="mb-3">
+      <label htmlFor="password" className="form-label">
         Password
       </label>
       <input
         type="password"
         className="form-control"
-        id="exampleInputPassword1"
+        id="password"
+        onChange={handlePassword}
       />
     </div>
-    <div className="mb-3 form-check">
-      <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-      <label className="form-check-label" htmlFor="exampleCheck1">
-        Check me out
-      </label>
-    </div>
-    <button type="submit" className="btn btn-primary">
+   
+    <div className="text-center">
+    <button type="submit" className="btn btn-success ">
       Submit
     </button>
+    </div>
   </form>
 
     </div>
