@@ -19,6 +19,16 @@ const Form = () => {
   }
   const handleSubmit=(e)=>{
     console.log(e.target.value);
+    e.preventDefeul()
+    alert(
+      `username:${username}
+      email:${email}
+      password:${password}`
+
+    )
+    setEmail("")
+    setPassword("")
+    setUsername("")
   }
 
 
