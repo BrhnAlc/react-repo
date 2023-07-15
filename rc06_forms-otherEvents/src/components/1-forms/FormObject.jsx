@@ -1,11 +1,17 @@
 import { useState } from "react"
 
-const FormObject = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
+
+const FormObject=()=>{
+
+
+  const [formData,setFormData]=useState({
+    username:"",
+    email:"",
+    password:"",
   })
+
+}
+
 
   //? Destr.
   const { username, email, password } = formData
