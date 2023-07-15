@@ -13,10 +13,7 @@ const Form = () => {
     setUsername(e.target.value)
   }
 
-  const handlePassword=(e)=>{
-    console.log(e.target.value);
-    setPassword(e.target.value)
-  }
+ 
   const handleSubmit=(e)=>{
     console.log(e.target.value);
     e.preventDefeul()
@@ -29,6 +26,7 @@ const Form = () => {
     setEmail("")
     setPassword("")
     setUsername("")
+    
   }
 
 
@@ -47,6 +45,7 @@ const Form = () => {
         id="username"
         aria-describedby="emailHelp"
         onChange={handleUsername}
+        value={username}
       />
       
     </div>
@@ -60,6 +59,7 @@ const Form = () => {
         id="email"
         aria-describedby="emailHelp"
         onChange={(e)=>setEmail(e.target.value)}
+        value={email}
         
       />
       
@@ -72,7 +72,8 @@ const Form = () => {
         type="password"
         className="form-control"
         id="password"
-        onChange={handlePassword}
+        onChange={(e)=>setPassword(e.target.value)}
+        value={password}
       />
     </div>
    
