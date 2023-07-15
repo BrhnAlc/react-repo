@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 const FormObject = () => {
-  const [formData, setFormData] = useState({
+  const [formData,setFormData]= useState({
     username: "",
-    email: "",
-    password: "",
+    email:"",
+    password:"",
   })
 
   //? Destr.
@@ -30,7 +30,7 @@ const FormObject = () => {
     // console.log(e.target.value)
     // console.log(e.target.name)
     // console.log(e.target.id)
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData , [e.target.name]: e.target.value })
   }
 
   return (
