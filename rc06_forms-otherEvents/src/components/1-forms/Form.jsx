@@ -9,13 +9,13 @@ const Form = () => {
 
 
   const handleUsername =(e)=>{
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setUsername(e.target.value)
   }
 
  
   const handleSubmit=(e)=>{
-    console.log(e.target.value);
+    // console.log(e.target.value);
     e.preventDefeul()
     alert(
       `username:${username}
