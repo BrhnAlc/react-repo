@@ -8,6 +8,14 @@ const KeyboardClipboard = () => {
   const [alaca,setAlaca]=useState("")
   const [ burhan, setBurhan] = useState("")
   const [seni,setSeni]=useState("")
+
+const handleKeyDown=(e)=>{
+  if(e.keyCode >= 48 && e.keyCode<=57){
+    alert("Please dont enter a number")
+  }
+
+}
+
   return (
     <div className="container">
       <h2 className="text-center text-danger mt-5">Keyboard-Clipboard</h2>
@@ -19,6 +27,7 @@ const KeyboardClipboard = () => {
    <input type="text" className='form-control mt-4 text-bg-success' onChange={(e)=>setBurhan(e.target.value)}/>
 
    <input type="text" className='form-control mt-4 text-bg-danger' onChange={(e)=>{ setSeni(e.target.value.toLocaleUpperCase())}}
+   onKeyDown={handleKeyDown}
    value={seni}
    />
 
