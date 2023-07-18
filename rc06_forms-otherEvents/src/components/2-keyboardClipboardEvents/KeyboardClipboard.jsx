@@ -18,13 +18,15 @@ const KeyboardClipboard = () => {
 
    <input type="text" className='form-control mt-4 text-bg-success' onChange={(e)=>setBurhan(e.target.value)}/>
 
-   <input type="text" className='form-control mt-4 text-bg-danger' onChange={(e)=>setSeni(e.target.value)}/>
-   
+   <input type="text" className='form-control mt-4 text-bg-danger' onChange={(e)=>{ setSeni(e.target.value.toLocaleUpperCase())}}
+   value={seni}
+   />
+
    <div className="mt-4 text-center text-success">
     <h3>Copied Content</h3>
-    <p className='border border-4'>{content}</p>
+    <p className='border border-4'>{content.toLocaleUpperCase()}</p>
 
-    <p className='border border-4 mt-5'>{alaca}</p>
+    <p className='border border-4 mt-5'>{alaca.toLocaleLowerCase()}</p>
 
     <p className='border border-4 mt-5g'>{burhan}</p>
 
