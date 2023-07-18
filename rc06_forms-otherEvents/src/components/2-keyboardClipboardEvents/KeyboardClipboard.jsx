@@ -41,7 +41,7 @@ const handleKeyDown=(e)=>{
 
     <p className='border border-3 mt-4sad p-4'>{seni}</p>
    </div>
-
+   <textarea className='form-control border-4 text-bg-success' name="" id="" cols="30" rows="10"></textarea>
     </div>
   )
 }
