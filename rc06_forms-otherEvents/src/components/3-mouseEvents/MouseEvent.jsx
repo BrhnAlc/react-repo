@@ -3,6 +3,12 @@ import { useState } from "react"
 const MouseEvent = () => {
   
 const [visible,setVisible] =useState(false)
+
+const handleMove=(e)=>{
+console.log("X:", e.pageX);
+console.log("Y:", e.pageY);
+}
+
   return (
     <div className="container text-center d-flex flex-column align-items-center mt-4">
       <h2 className="text-danger">MOUSE EVENTS</h2>
@@ -25,7 +31,7 @@ const [visible,setVisible] =useState(false)
       <div
         id="todo-3"
         className="bg-success text-light w-50 p-4 my-4"
-       
+       onMouseMove={handleMove}
       >
         todo item 3
       </div>
