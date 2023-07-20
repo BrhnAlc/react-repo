@@ -9,7 +9,7 @@ function App() {
     <div className="container text-center mt-4">
       <button className="btn btn-danger" onClick={() => setVisible(!visible)}>
       {/* {/* Show/Hide */}
-      </button> */}
+      </button>}
 
       {visible && <LifeCycleMethods />}
 
